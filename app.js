@@ -50,20 +50,41 @@ const spells = require('./spells').spells
 // Keep spells that are level 1 or below
 // Remove spells that are level 2 or above
 
-function filterSpellsLevel(spells) {
-    let lowSpells = spells.filter((spell) => {
-        if (...)
-            return spell.level < 2;
-    });
-    return lowSpells;
-}
+// function filterSpellsLevel(spells) {
+//     let lowSpells = spells.filter((spell) => {
+//         if (...)
+//             return spell.level < 2;
+//     });
+//     return lowSpells;
+// }
 
-console.log(filterSpellsLevel(spells))
-
-
+// console.log(filterSpellsLevel(spells))
+//^^not totally finished
 
 // REDUCE
 
 // Write a function called reduceSpellNames that returns an array of the spells' names
 // Function takes an array of spell objects as an input
 // Function returns an array of spell names as an output
+
+// const numberArray = [1, 2, 3, 4, 5]
+
+// function sumArrayNums(array) {
+//     let sum = array.reduce((accumulator, currentValue) => {
+
+//         return accumulator + currentValue
+
+//     }, 0)
+
+//     return sum
+// }
+
+// console.log(sumArrayNums(numberArray))
+
+function reduceSpellNames(spells) {
+    let name = spells.reduce((spellArray, spell) => {
+        return spellArray.push(spell.name)
+    }, [])
+}
+
+console.log(reduceSpellNames(spells))
